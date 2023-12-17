@@ -42,11 +42,11 @@ class Person:
         
         if self.gender == "Male":
             formula = 10 * self.weight + 6.25 * self.height - 5 * self.age + 5
-            print(formula)
+            return(formula)
             
         elif self.gender == "Female":
             formula = 10 * self.weight + 6.25 * self.height - 5 * self.age - 161
-            print(formula)
+            return(formula)
         
         else:
             messagebox.showinfo("Error", "Please fill in all the required fields.")
@@ -88,6 +88,5 @@ height_entry.pack(pady=12, padx=10)
 
 button = customtkinter.CTkButton(master=frame, text="Calculate", command=calculate)
 button.pack(pady=12, padx=10)
-
 
 root.mainloop()

@@ -22,28 +22,47 @@ root.geometry("700x500")
 # BMR (MALE) = 10 X WEIGHT(KG) + 6.25 X HEIGHT(CM) - 5 X AGE(Y) + 5
 # BMR (FEMALE) = 10 X WEIGHT(KG) + 6.25 X HEIGHT(CM) - 5 X AGE(Y) - 161
 
-class person(self, age, weight, height, gender, activity):
-    
-    print("class")
-    
-def calculate():
-    age = int(age_entry.get())
-    weight = int(weight_entry.get())
-    height = int(height_entry.get())
-    gender = str(gender_combobox.get())
-    activity = str(activity_combobox.get())
-    
-    if gender == "Male":
-        formula = 10 * weight + 6.25 * height - 5 * age + 5
-        print(formula)
+
+class Person:
+    def __init__(self, age=0, weight=0, height=0, gender="", activity=""):
+        self.age = age
+        self.weight = weight
+        self.height = height
+        self.gender = gender
+        self.activity = activity
         
-    elif gender == "Female":
-        formula = 10 * weight + 6.25 * height - 5 * age - 161
-        print(formula)
-    
-    else:
-        messagebox.showinfo("Error", "Please fill in all the required fields.")
-        return
+    def calculate_macros(self):
+        if not self.age or not self.weight or not self.height:
+            messagebox.showinfo("Error", "Please fill in all the information")
+            return
+        
+        if not self.gender or not self.activity:
+            messagebox.showinfo("Error", "Please fill in all the information")
+            return
+        
+        if self.gender == "Male":
+            formula = 10 * self.weight + 6.25 * self.height - 5 * self.age + 5
+            print(formula)
+            
+        elif self.gender == "Female":
+            formula = 10 * self.weight + 6.25 * self.height - 5 * self.age - 161
+            print(formula)
+        
+        else:
+            messagebox.showinfo("Error", "Please fill in all the required fields.")
+            return
+        
+person = Person()
+
+def calculate():
+    person.__init__(
+        int(age_entry.get()),
+        int(weight_entry.get()),
+        int(height_entry.get()),
+        str(gender_combobox.get()),
+        str(activity_combobox.get())
+    )
+    person.calculate_macros()
 
 
 frame = customtkinter.CTkFrame(master=root)

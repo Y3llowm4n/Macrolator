@@ -23,6 +23,7 @@ root.geometry("700x500")
 # BMR (FEMALE) = 10 X WEIGHT(KG) + 6.25 X HEIGHT(CM) - 5 X AGE(Y) - 161
 
 
+
 class Person:
     def __init__(self, age=0, weight=0, height=0, gender="", activity=""):
         self.age = age
@@ -88,5 +89,14 @@ height_entry.pack(pady=12, padx=10)
 
 button = customtkinter.CTkButton(master=frame, text="Calculate", command=calculate)
 button.pack(pady=12, padx=10)
+
+# text_var=StringVar("")
+
+# result_label = customtkinter.CTkLabel(master=frame,
+#                                       textvariable=text_var,
+#                                       width=150,
+#                                       height=50,
+#                                       text_color="black")
+# result_label.pack(pady=12,padx=10)
 
 root.mainloop()

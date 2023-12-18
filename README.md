@@ -19,6 +19,16 @@ The Macro Calculator App is a simple application designed to help users calculat
 
    git clone https://github.com/your-username/macro-calculator.git
 
+## Installing Packages
+
+1. cd macro-calculator
+2. pip install customtkinter
+3. pip install packaging
+
+## Run Application
+
+- python main.py
+
 ## Usage:
 
 1.  Launch the application.

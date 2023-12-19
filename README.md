@@ -2,6 +2,17 @@
 
 The Macro Calculator App is a simple application designed to help users calculate their daily macronutrient intake based on their gender, activity level, and fitness goal.
 
+## Activity Factors
+
+- Not Active: 
+   Works a desk job, very little activity outside of lifting
+- Lightly Active: 
+   Works a desk job, takes pet for a walk most days in addition to lifting
+- Moderately Active: 
+   Works as a full-time waitress, occasionally plays tennis in addition to lifting
+- Highly Active: 
+   Works as a construction worker, regular hiking in addition to lifting
+
 ## Features
 
 - Calculate daily macronutrient intake for weight management.

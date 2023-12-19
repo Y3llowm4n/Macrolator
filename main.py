@@ -7,8 +7,6 @@ customtkinter.set_default_color_theme("dark-blue")
 root = customtkinter.CTk()
 root.geometry("500x600")
 
-
-
 # Factors for the selected activity level
 activity_factors = {
     "Not Active": 1.4,
